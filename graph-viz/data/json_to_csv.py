@@ -18,8 +18,8 @@ def detail_error_detect(data, label):
 
 def key_error_detect(data):
     global status
-    has_from_coordinate = detail_error_detect(data[0], 'from_coordinate')
-    has_to_coordinate = detail_error_detect(data[0], 'to_coordinate')
+    has_from_coordinate = detail_error_detect(data, 'from_coordinate')
+    has_to_coordinate = detail_error_detect(data, 'to_coordinate')
     if has_from_coordinate and has_to_coordinate:
         status = 1
     elif has_from_coordinate and not has_to_coordinate:
