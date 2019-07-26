@@ -89,20 +89,18 @@ def create_csv_from_json(json_file):
             data[0]['ds_tweet_reply_graph']['from_text'] = data[0]['ds_tweet_reply_graph']['from_text'].replace(
                 "\n", " ")
             data[0]['ds_tweet_reply_graph']['from_text'] = data[0]['ds_tweet_reply_graph']['from_text'].replace("|",
-                                                                                                                "")
+                                                                                                                " ")
             data[0]['ds_tweet_reply_graph']['to_text'] = data[0]['ds_tweet_reply_graph']['to_text'].replace("\n",
                                                                                                             " ")
-            data[0]['ds_tweet_reply_graph']['to_text'] = data[0]['ds_tweet_reply_graph']['to_text'].replace("|", "")
+            data[0]['ds_tweet_reply_graph']['to_text'] = data[0]['ds_tweet_reply_graph']['to_text'].replace("|", " ")
 
             # form a line of data[0]
             data_line = [data[0]['ds_tweet_reply_graph']['tweet_from'],
-                         data[0]['ds_tweet_reply_graph']['from_user'],
                          data[0]['ds_tweet_reply_graph']['from_create_at'],
                          data[0]['ds_tweet_reply_graph']['from_text'],
                          source[0],
                          source[1],
                          data[0]['ds_tweet_reply_graph']['tweet_to'],
-                         data[0]['ds_tweet_reply_graph']['to_user'],
                          data[0]['ds_tweet_reply_graph']['to_create_at'],
                          data[0]['ds_tweet_reply_graph']['to_text'],
                          target[0],
